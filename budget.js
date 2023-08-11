@@ -101,4 +101,45 @@ finalizarBtn.onclick = () => {
 }
 
 //me falta renderizar toda la tabla para cuando cerramos la pestaña y queremos recupaerar la data del storage
-//me falta eliminar gastos que no quiera durante el mes
+//me falta eliminar gastos que no quiera durante el mes > afterlass con el tacho de basura
+
+// REVISAR LA CLASE ENTERA Y VER SI TIENE SENTIDO ESTO. TENGO QUE HACER UN GET CON JSON
+function obtenerJsonPropio(){
+    const URLJSON = "/months.json";
+    fetch(URLJSON)
+    .then( resp => resp.json())
+    .then( data => console.log(data.past2023))
+    
+}
+    obtenerJsonPropio();
+    
+        /*const mesesPasados = data.past2023;
+        mesesPasados.forEach(mes => {
+            document.getElementById("past2023").innerHTML += `
+            <tr>
+                <td>${past2023.month}</td>
+                <td>${past2023.budget}</td>
+            `;
+        });
+        })
+        .catch((error) => console.log(error));*/
+        
+    /*inyeccion al dom
+    console.log(data);
+    const mesespasados = data.books; //esto es un array
+    console.log(listaLibros);
+    listaLibros.forEach(libro => {
+        document.getElementById('libros').innerHTML += `
+            <tr>
+                <td>${libro.title}</td>
+                <td>
+                    <img src=${libro.image}>
+                </td>
+            </tr>
+        `;
+    }); 
+/*})
+.catch((error) => console.log(error));
+}
+
+obtenerJsonPropio();*/
